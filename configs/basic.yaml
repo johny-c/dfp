@@ -1,0 +1,48 @@
+# env
+scenario: D1_basic
+image_shape: [84, 84]
+frame_skip: 4
+switch_maps: False
+maps: [MAP01]
+
+# training loop
+n_train_steps: 800_000
+n_eval_episodes: 100
+train_freq: 64    # env steps
+test_freq: 7812   # grad steps
+log_freq: 100     # grad steps
+init_eval: True
+
+# DFP / Q-learning
+replay_capacity: 20_000
+min_horizon: 4
+epsilon_start: 1.0
+epsilon_end: 0.15
+exploration_frac: 1.0
+future_steps: [1, 2, 4, 8, 16, 32]
+temporal_coeffs: [0, 0, 0, 0.5, 0.5, 1.0]
+sample_goals: False
+goal_space: pos_neg  # pos_neg | pos
+target_meas_scale: [30.]
+meas_coeffs: [1.]
+
+# optimization
+batch_size: 64
+lr: 0.0001
+scheduler_step: 250_000
+scheduler_decay: 0.3
+
+# other
+device: cpu
+seed: 1
+
+model:
+    dim_hidden: 128
+    dim_joint_hidden: 512
+    nonlinearity: lrelu
+    alpha: 0.2
+
+    channels: [32, 64, 64]
+    kernels: [8, 4, 3]
+    strides: [4, 2, 1]
+    dim_perception: 512
