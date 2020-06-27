@@ -30,14 +30,14 @@ This code base uses [`sacred`](https://github.com/IDSIA/sacred) to manage config
 You can run the experiments for each scenario with
 
 ```bash
-python launch.py with configs/${SCENARIO_NAME}.yaml
+python launch.py with configs/$SCENARIO_NAME.yaml
 ```
 where `SCENARIO_NAME` can be one of {'basic', 'navigation', 'battle', 'battle2'}.
 
 If you want to store configuration, metrics and artifacts in files, use 
 
 ```bash
-python launch.py with configs/${SCENARIO_NAME}.yaml -F ${SAVE_DIR}
+python launch.py with configs/$SCENARIO_NAME.yaml -F $SAVE_DIR
 ```
 where `SAVE_DIR` is the directory path to save under.
 
