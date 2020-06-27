@@ -1,7 +1,7 @@
 # Direct Future Prediction
 This is a re-implementation of Direct Future Prediction in PyTorch.
 
-If you use this code or the provided environments in your research, please cite the following paper:
+If you use this code or the provided environments in your research, please cite the following [paper](https://arxiv.org/pdf/1611.01779.pdf):
 
 ```
 @inproceedings{DK2017,
@@ -42,6 +42,11 @@ python launch.py with configs/$SCENARIO_NAME.yaml -F $SAVE_DIR
 where `SAVE_DIR` is the directory path to save under.
 
 For different kinds of storage options (e.g. databases), check [sacred's documentation](https://sacred.readthedocs.io/en/stable/observers.html#).
+
+
+## Trained Models
+
+Trained networks for each of the 4 scenarios can be found [here](https://www.amazon.de/clouddrive/share/bNc4LDikcT3DDmheWgE7D4zYhaXyNpEbSMX5AjybV8).
 
 
 ## Official Implementation
