@@ -11,7 +11,8 @@ class TargetMeasEnvWrapper(gym.Wrapper):
 
     def __init__(self, env, meas_coeffs, temporal_coeffs, sample_goals, goal_space='pos_neg'):
         assert goal_space in ('pos', 'pos_neg')
-        assert isinstance(env.observation_space, gym.spaces.Dict), f"MeasEnvWrapper expects dictionary observations."
+        assert isinstance(env.observation_space, gym.spaces.Dict), \
+            f"{self.__class__.__name__} expects dictionary observations."
 
         super().__init__(env)
 
