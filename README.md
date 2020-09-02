@@ -46,7 +46,7 @@ For different kinds of storage options (e.g. databases), check [sacred's documen
 
 ## Trained Models
 
-Trained networks for each of the 4 scenarios can be found [here](https://www.amazon.de/clouddrive/share/bNc4LDikcT3DDmheWgE7D4zYhaXyNpEbSMX5AjybV8).
+Trained networks for each of the 4 scenarios can be found [here](https://drive.google.com/drive/folders/1eJtFVSH6PMVglsuNWsfXKh3WDD9c1IU9?usp=sharing).
 
 
 ## Official Implementation
